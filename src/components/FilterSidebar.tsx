@@ -44,7 +44,7 @@ export function FilterSidebar({
               onClick={() => onCategoryChange(category)}
               className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
                 selectedCategory === category
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-[#163C40] text-white'
                   : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
               }`}
             >
@@ -64,7 +64,7 @@ export function FilterSidebar({
             max="200"
             value={priceRange[1]}
             onChange={(e) => onPriceRangeChange([priceRange[0], Number(e.target.value)])}
-            className="w-full accent-indigo-600"
+            className="w-full accent-[#163C40]"
           />
           <div className="flex items-center justify-between text-sm text-gray-600">
             <span>${priceRange[0]}</span>
@@ -83,7 +83,7 @@ export function FilterSidebar({
               onClick={() => toggleSize(size)}
               className={`py-2 rounded-lg transition-colors ${
                 selectedSizes.includes(size)
-                  ? 'bg-indigo-600 text-white'
+                  ? 'bg-[#163C40] text-white'
                   : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
               }`}
             >
