@@ -14,19 +14,19 @@ export function Footer() {
             <div className="flex gap-3">
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-indigo-600 hover:text-indigo-600 transition-colors"
+                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#163C40] hover:text-[#163C40] transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-indigo-600 hover:text-indigo-600 transition-colors"
+                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#163C40] hover:text-[#163C40] transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-indigo-600 hover:text-indigo-600 transition-colors"
+                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#163C40] hover:text-[#163C40] transition-colors"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -38,27 +38,27 @@ export function Footer() {
             <h4 className="text-gray-900 mb-4">Shop</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Men's Shoes
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Women's Shoes
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Kids' Shoes
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Sale
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   New Arrivals
                 </a>
               </li>
@@ -70,27 +70,27 @@ export function Footer() {
             <h4 className="text-gray-900 mb-4">Support</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Shipping Info
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Returns & Exchanges
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   Size Guide
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                   FAQ
                 </a>
               </li>
@@ -109,10 +109,10 @@ export function Footer() {
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#163C40] focus:border-transparent"
                 />
               </div>
-              <button className="w-full py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+              <button className="w-full py-3 bg-[#163C40] text-white rounded-lg hover:bg-[#0f2a2d] transition-colors">
                 Subscribe
               </button>
             </div>
@@ -126,13 +126,13 @@ export function Footer() {
               © 2025 StepUp. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
                 Cookies
               </a>
             </div>

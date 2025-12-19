@@ -47,7 +47,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick }: H
                   onClick={() => handleNavClick(item)}
                   className={`transition-colors ${
                     activeNav === item
-                      ? 'text-indigo-600 font-medium'
+                      ? 'text-[#163C40] font-medium'
                       : 'text-gray-700 hover:text-gray-900'
                   }`}
                 >
@@ -64,7 +64,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick }: H
               <input
                 type="text"
                 placeholder="Search shoes..."
-                className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+                className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#163C40] focus:border-transparent transition-all"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick }: H
             >
               <ShoppingCart className="w-5 h-5 text-gray-700" />
               {cartItemsCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-[#163C40] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {cartItemsCount}
                 </span>
               )}
@@ -104,7 +104,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick }: H
             <input
               type="text"
               placeholder="Search shoes..."
-              className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#163C40] focus:border-transparent"
             />
           </div>
         </div>
@@ -119,7 +119,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick }: H
                   onClick={() => handleNavClick(item)}
                   className={`text-left transition-colors ${
                     activeNav === item
-                      ? 'text-indigo-600 font-medium'
+                      ? 'text-[#163C40] font-medium'
                       : 'text-gray-700 hover:text-gray-900'
                   }`}
                 >

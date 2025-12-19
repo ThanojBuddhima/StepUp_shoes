@@ -57,7 +57,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
         {!showQuickAdd && (
           <button
             onClick={() => setShowQuickAdd(true)}
-            className="absolute bottom-3 left-3 right-3 py-3 bg-indigo-600 text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 hover:bg-indigo-700"
+            className="absolute bottom-3 left-3 right-3 py-3 bg-[#163C40] text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 hover:bg-[#0f2a2d]"
           >
             <ShoppingCart className="w-5 h-5" />
             Quick Add
@@ -103,7 +103,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
                     onClick={() => setSelectedColor(color)}
                     className={`px-3 py-1 rounded-full text-sm transition-colors ${
                       selectedColor === color
-                        ? 'bg-indigo-600 text-white'
+                        ? 'bg-[#163C40] text-white'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >
@@ -123,7 +123,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
                     onClick={() => setSelectedSize(size)}
                     className={`py-2 rounded-lg text-sm transition-colors ${
                       selectedSize === size
-                        ? 'bg-indigo-600 text-white'
+                        ? 'bg-[#163C40] text-white'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >
@@ -140,7 +140,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
                 disabled={!selectedSize}
                 className={`flex-1 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 ${
                   selectedSize
-                    ? 'bg-indigo-600 text-white hover:bg-indigo-700'
+                    ? 'bg-[#163C40] text-white hover:bg-[#0f2a2d]'
                     : 'bg-gray-200 text-gray-400 cursor-not-allowed'
                 }`}
               >
