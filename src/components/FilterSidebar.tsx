@@ -44,8 +44,8 @@ export function FilterSidebar({
               onClick={() => onCategoryChange(category)}
               className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
                 selectedCategory === category
-                  ? 'bg-[#086E0A] text-white'
-                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                  ? 'bg-[#086E0A]/10 text-[#086E0A] border-2 border-[#086E0A]'
+                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-2 border-transparent'
               }`}
             >
               {category}
@@ -83,8 +83,8 @@ export function FilterSidebar({
               onClick={() => toggleSize(size)}
               className={`py-2 rounded-lg transition-colors ${
                 selectedSizes.includes(size)
-                  ? 'bg-[#086E0A] text-white'
-                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
+                  ? 'bg-[#086E0A]/10 text-[#086E0A] border-2 border-[#086E0A]'
+                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-2 border-transparent'
               }`}
             >
               {size}
