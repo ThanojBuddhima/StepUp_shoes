@@ -42,9 +42,9 @@ export function FilterSidebar({
             <button
               key={category}
               onClick={() => onCategoryChange(category)}
-              className="w-full text-left px-4 py-2 rounded-lg transition-colors border-2"
+              className="w-full text-left px-4 py-2 rounded-lg transition-colors border-2 font-medium"
               style={selectedCategory === category 
-                ? { backgroundColor: 'rgba(8, 110, 10, 0.15)', color: '#086E0A', borderColor: '#086E0A' }
+                ? { backgroundColor: '#086E0A', color: '#ffffff', borderColor: '#086E0A' }
                 : { backgroundColor: '#f9fafb', color: '#374151', borderColor: 'transparent' }
               }
             >
@@ -82,9 +82,9 @@ export function FilterSidebar({
             <button
               key={size}
               onClick={() => toggleSize(size)}
-              className="py-2 rounded-lg transition-colors border-2"
+              className="py-2 rounded-lg transition-colors border-2 font-medium"
               style={selectedSizes.includes(size)
-                ? { backgroundColor: 'rgba(8, 110, 10, 0.15)', color: '#086E0A', borderColor: '#086E0A' }
+                ? { backgroundColor: '#086E0A', color: '#ffffff', borderColor: '#086E0A' }
                 : { backgroundColor: '#f9fafb', color: '#374151', borderColor: 'transparent' }
               }
             >
@@ -101,7 +101,10 @@ export function FilterSidebar({
           onPriceRangeChange([0, 200]);
           onSizesChange([]);
         }}
-        className="w-full py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+        className="w-full py-3 border border-[#086E0A] rounded-lg text-[#086E0A] hover:bg-[#086E0A]/10 transition-colors"
+        style={{ borderColor: '#086E0A', color: '#086E0A' }}
+        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(8, 110, 10, 0.1)'}
+        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
       >
         Reset Filters
       </button>
@@ -125,7 +128,8 @@ export function FilterSidebar({
               <h2 className="text-xl text-gray-900">Filters</h2>
               <button
                 onClick={onClose}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                className="p-2 hover:bg-[#086E0A]/10 rounded-lg transition-colors"
+                style={{ color: '#086E0A' }}
               >
                 <X className="w-5 h-5" />
               </button>

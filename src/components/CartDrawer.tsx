@@ -36,7 +36,8 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 hover:bg-[#086E0A]/10 rounded-lg transition-colors"
+              style={{ color: '#086E0A' }}
             >
               <X className="w-5 h-5" />
             </button>
@@ -54,6 +55,9 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
                 <button
                   onClick={onClose}
                   className="px-6 py-3 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors"
+                  style={{ backgroundColor: '#086E0A' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
                 >
                   Continue Shopping
                 </button>
@@ -91,7 +95,8 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
                               item.quantity - 1
                             )
                           }
-                          className="w-8 h-8 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+                          className="w-8 h-8 bg-white border border-[#086E0A] rounded-lg flex items-center justify-center hover:bg-[#086E0A]/10 transition-colors"
+                          style={{ borderColor: '#086E0A', color: '#086E0A' }}
                         >
                           <Minus className="w-4 h-4" />
                         </button>
@@ -107,7 +112,8 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
                               item.quantity + 1
                             )
                           }
-                          className="w-8 h-8 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+                          className="w-8 h-8 bg-white border border-[#086E0A] rounded-lg flex items-center justify-center hover:bg-[#086E0A]/10 transition-colors"
+                          style={{ borderColor: '#086E0A', color: '#086E0A' }}
                         >
                           <Plus className="w-4 h-4" />
                         </button>
@@ -156,13 +162,31 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
               </div>
 
               {/* Checkout Button */}
-              <button className="w-full py-4 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors">
+              <button 
+                className="w-full py-4 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors"
+                style={{ backgroundColor: '#086E0A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
+              >
                 Proceed to Checkout
               </button>
 
               <button
                 onClick={onClose}
-                className="w-full py-3 text-gray-700 hover:text-gray-900 transition-colors"
+                className="w-full py-3 border rounded-lg transition-colors font-medium"
+                style={{ 
+                  borderColor: '#086E0A', 
+                  color: '#086E0A',
+                  backgroundColor: 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = 'rgba(8, 110, 10, 0.1)';
+                  e.currentTarget.style.color = '#086E0A';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#086E0A';
+                }}
               >
                 Continue Shopping
               </button>

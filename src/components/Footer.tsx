@@ -2,7 +2,9 @@ import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 mt-16">
+    <footer className="border-t border-[#086E0A]/20 mt-16" style={{ 
+      background: 'linear-gradient(to bottom right, rgba(8, 110, 10, 0.15), rgba(8, 110, 10, 0.08), rgba(8, 110, 10, 0.12))'
+    }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
@@ -14,19 +16,22 @@ export function Footer() {
             <div className="flex gap-3">
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:text-[#086E0A] transition-colors"
+                className="w-10 h-10 bg-[#086E0A]/10 border border-[#086E0A]/20 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:bg-[#086E0A]/20 transition-colors"
+                style={{ color: '#086E0A' }}
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:text-[#086E0A] transition-colors"
+                className="w-10 h-10 bg-[#086E0A]/10 border border-[#086E0A]/20 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:bg-[#086E0A]/20 transition-colors"
+                style={{ color: '#086E0A' }}
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:text-[#086E0A] transition-colors"
+                className="w-10 h-10 bg-[#086E0A]/10 border border-[#086E0A]/20 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:bg-[#086E0A]/20 transition-colors"
+                style={{ color: '#086E0A' }}
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -35,7 +40,7 @@ export function Footer() {
 
           {/* Shop */}
           <div>
-            <h4 className="text-gray-900 mb-4">Shop</h4>
+            <h4 className="text-gray-900 font-semibold mb-4">Shop</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
@@ -67,7 +72,7 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="text-gray-900 mb-4">Support</h4>
+            <h4 className="text-gray-900 font-semibold mb-4">Support</h4>
             <ul className="space-y-3">
               <li>
                 <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
@@ -99,20 +104,25 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h4 className="text-gray-900 mb-4">Newsletter</h4>
+            <h4 className="text-gray-900 font-semibold mb-4">Newsletter</h4>
             <p className="text-gray-600 mb-4">
               Subscribe to get special offers and updates.
             </p>
             <div className="space-y-3">
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: '#086E0A' }} />
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#086E0A] focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#086E0A] placeholder:text-gray-400 bg-white border border-gray-300 text-gray-900"
                 />
               </div>
-              <button className="w-full py-3 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors">
+              <button 
+                className="w-full py-3 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors"
+                style={{ backgroundColor: '#086E0A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
+              >
                 Subscribe
               </button>
             </div>

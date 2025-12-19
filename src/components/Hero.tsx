@@ -2,7 +2,9 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <div className="relative bg-gradient-to-br from-[#086E0A]/10 via-white to-[#086E0A]/5 overflow-hidden">
+    <div className="relative overflow-hidden" style={{ 
+      background: 'linear-gradient(to bottom right, rgba(8, 110, 10, 0.15), rgba(8, 110, 10, 0.08), rgba(8, 110, 10, 0.12))'
+    }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
@@ -22,12 +24,22 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="px-8 py-4 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors flex items-center justify-center gap-2 group">
+              <button 
+                className="px-8 py-4 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] focus:outline-none focus:ring-2 focus:ring-[#086E0A] focus:ring-offset-2 transition-colors flex items-center justify-center gap-2 group font-medium"
+                style={{ backgroundColor: '#086E0A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
+              >
                 Shop Now
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               
-              <button className="px-8 py-4 bg-white text-gray-900 border border-gray-300 rounded-lg hover:border-gray-400 transition-colors">
+              <button 
+                className="px-8 py-4 bg-white text-[#086E0A] border border-[#086E0A] rounded-lg hover:bg-[#086E0A]/10 transition-colors"
+                style={{ borderColor: '#086E0A', color: '#086E0A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(8, 110, 10, 0.1)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
+              >
                 View Collection
               </button>
             </div>

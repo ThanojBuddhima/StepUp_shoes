@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-[#086E0A] text-white hover:bg-[#065408]",
         destructive:
           "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
-          "border bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border border-[#086E0A] bg-background text-[#086E0A] hover:bg-[#086E0A]/10 dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-[#086E0A] text-white hover:bg-[#065408]",
         ghost:
-          "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline",
+          "hover:bg-[#086E0A]/10 hover:text-[#086E0A] dark:hover:bg-accent/50",
+        link: "text-[#086E0A] underline-offset-4 hover:underline",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
@@ -45,11 +45,32 @@ function Button({
     asChild?: boolean;
   }) {
   const Comp = asChild ? Slot : "button";
+  const isDefault = variant === "default" || variant === undefined;
+  const isSecondary = variant === "secondary";
 
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
+      style={
+        isDefault || isSecondary
+          ? { backgroundColor: "#086E0A", color: "#ffffff" }
+          : undefined
+      }
+      onMouseEnter={
+        isDefault || isSecondary
+          ? (e) => {
+              e.currentTarget.style.backgroundColor = "#065408";
+            }
+          : undefined
+      }
+      onMouseLeave={
+        isDefault || isSecondary
+          ? (e) => {
+              e.currentTarget.style.backgroundColor = "#086E0A";
+            }
+          : undefined
+      }
       {...props}
     />
   );

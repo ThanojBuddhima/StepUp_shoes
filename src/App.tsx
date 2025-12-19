@@ -5,6 +5,7 @@ import { FilterSidebar } from './components/FilterSidebar';
 import { ProductGrid } from './components/ProductGrid';
 import { Footer } from './components/Footer';
 import { CartDrawer } from './components/CartDrawer';
+import { ProfileDrawer } from './components/ProfileDrawer';
 
 export interface Product {
   id: number;
@@ -273,7 +274,17 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [activeNav, setActiveNav] = useState<string>('All');
+  const [favorites, setFavorites] = useState<number[]>([]);
+
+  const toggleFavorite = (productId: number) => {
+    setFavorites(prev => 
+      prev.includes(productId) 
+        ? prev.filter(id => id !== productId)
+        : [...prev, productId]
+    );
+  };
 
   // Map navigation items to product filtering
   const getFilteredByNav = (products: Product[], nav: string) => {
@@ -286,6 +297,8 @@ export default function App() {
         return products.filter(p => p.gender === 'Kids');
       case 'Sale':
         return products.filter(p => p.isOnSale === true);
+      case 'Favorites':
+        return products.filter(p => favorites.includes(p.id));
       default:
         return products;
     }
@@ -361,6 +374,7 @@ export default function App() {
         onCartClick={() => setIsCartOpen(true)}
         activeNav={activeNav}
         onNavClick={handleNavClick}
+        onProfileClick={() => setIsProfileOpen(true)}
       />
       
       {activeNav === 'All' && <Hero />}
@@ -384,6 +398,9 @@ export default function App() {
             onSortChange={setSortBy}
             onAddToCart={addToCart}
             onFilterClick={() => setIsMobileFilterOpen(true)}
+            favorites={favorites}
+            onToggleFavorite={toggleFavorite}
+            activeNav={activeNav}
           />
         </div>
       </div>
@@ -395,6 +412,16 @@ export default function App() {
         onClose={() => setIsCartOpen(false)}
         cart={cart}
         onUpdateQuantity={updateCartItemQuantity}
+      />
+
+      <ProfileDrawer
+        isOpen={isProfileOpen}
+        onClose={() => setIsProfileOpen(false)}
+        favoritesCount={favorites.length}
+        onNavigateToFavorites={() => {
+          setActiveNav('Favorites');
+          setIsProfileOpen(false);
+        }}
       />
     </div>
   );
