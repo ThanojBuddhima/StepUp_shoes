@@ -53,7 +53,7 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
                 <p className="text-gray-600 mb-6">Add some shoes to get started!</p>
                 <button
                   onClick={onClose}
-                  className="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                  className="px-6 py-3 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors"
                 >
                   Continue Shopping
                 </button>
@@ -143,7 +143,7 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
                   <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
                 </div>
                 {subtotal < 100 && (
-                  <p className="text-sm text-indigo-600">
+                  <p className="text-sm text-[#086E0A]">
                     Add ${(100 - subtotal).toFixed(2)} more for free shipping!
                   </p>
                 )}
@@ -156,7 +156,7 @@ export function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity }: CartDraw
               </div>
 
               {/* Checkout Button */}
-              <button className="w-full py-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+              <button className="w-full py-4 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors">
                 Proceed to Checkout
               </button>
 

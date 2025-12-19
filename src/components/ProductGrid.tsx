@@ -34,7 +34,7 @@ export function ProductGrid({ products, sortBy, onSortChange, onAddToCart, onFil
           <select
             value={sortBy}
             onChange={(e) => onSortChange(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
+            className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[#086E0A] transition-all"
           >
             <option value="featured">Featured</option>
             <option value="price-low">Price: Low to High</option>
