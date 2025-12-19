@@ -42,11 +42,11 @@ export function FilterSidebar({
             <button
               key={category}
               onClick={() => onCategoryChange(category)}
-              className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
-                selectedCategory === category
-                  ? 'bg-[#086E0A]/10 text-[#086E0A] border-2 border-[#086E0A]'
-                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-2 border-transparent'
-              }`}
+              className="w-full text-left px-4 py-2 rounded-lg transition-colors border-2"
+              style={selectedCategory === category 
+                ? { backgroundColor: 'rgba(8, 110, 10, 0.15)', color: '#086E0A', borderColor: '#086E0A' }
+                : { backgroundColor: '#f9fafb', color: '#374151', borderColor: 'transparent' }
+              }
             >
               {category}
             </button>
@@ -64,7 +64,8 @@ export function FilterSidebar({
             max="200"
             value={priceRange[1]}
             onChange={(e) => onPriceRangeChange([priceRange[0], Number(e.target.value)])}
-            className="w-full accent-[#086E0A]"
+            className="w-full"
+            style={{ accentColor: '#086E0A' }}
           />
           <div className="flex items-center justify-between text-sm text-gray-600">
             <span>${priceRange[0]}</span>
@@ -81,11 +82,11 @@ export function FilterSidebar({
             <button
               key={size}
               onClick={() => toggleSize(size)}
-              className={`py-2 rounded-lg transition-colors ${
-                selectedSizes.includes(size)
-                  ? 'bg-[#086E0A]/10 text-[#086E0A] border-2 border-[#086E0A]'
-                  : 'bg-gray-50 text-gray-700 hover:bg-gray-100 border-2 border-transparent'
-              }`}
+              className="py-2 rounded-lg transition-colors border-2"
+              style={selectedSizes.includes(size)
+                ? { backgroundColor: 'rgba(8, 110, 10, 0.15)', color: '#086E0A', borderColor: '#086E0A' }
+                : { backgroundColor: '#f9fafb', color: '#374151', borderColor: 'transparent' }
+              }
             >
               {size}
             </button>
