@@ -14,19 +14,19 @@ export function Footer() {
             <div className="flex gap-3">
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#163C40] hover:text-[#163C40] transition-colors"
+                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:text-[#086E0A] transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#163C40] hover:text-[#163C40] transition-colors"
+                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:text-[#086E0A] transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#163C40] hover:text-[#163C40] transition-colors"
+                className="w-10 h-10 bg-white border border-gray-300 rounded-lg flex items-center justify-center hover:border-[#086E0A] hover:text-[#086E0A] transition-colors"
               >
                 <Twitter className="w-5 h-5" />
               </a>
@@ -38,27 +38,27 @@ export function Footer() {
             <h4 className="text-gray-900 mb-4">Shop</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Men's Shoes
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Women's Shoes
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Kids' Shoes
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Sale
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   New Arrivals
                 </a>
               </li>
@@ -70,27 +70,27 @@ export function Footer() {
             <h4 className="text-gray-900 mb-4">Support</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Contact Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Shipping Info
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Returns & Exchanges
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   Size Guide
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+                <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                   FAQ
                 </a>
               </li>
@@ -109,10 +109,10 @@ export function Footer() {
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#163C40] focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#086E0A] focus:border-transparent"
                 />
               </div>
-              <button className="w-full py-3 bg-[#163C40] text-white rounded-lg hover:bg-[#0f2a2d] transition-colors">
+              <button className="w-full py-3 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors">
                 Subscribe
               </button>
             </div>
@@ -126,13 +126,13 @@ export function Footer() {
               © 2025 StepUp. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+              <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+              <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-600 hover:text-[#163C40] transition-colors">
+              <a href="#" className="text-gray-600 hover:text-[#086E0A] transition-colors">
                 Cookies
               </a>
             </div>

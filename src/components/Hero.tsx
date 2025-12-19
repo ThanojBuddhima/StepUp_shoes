@@ -2,19 +2,19 @@ import { ArrowRight } from 'lucide-react';
 
 export function Hero() {
   return (
-    <div className="relative bg-gradient-to-br from-[#163C40]/10 via-white to-[#163C40]/5 overflow-hidden">
+    <div className="relative bg-gradient-to-br from-[#086E0A]/10 via-white to-[#086E0A]/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
-            <div className="inline-block px-4 py-2 bg-[#163C40]/10 text-[#163C40] rounded-full">
+            <div className="inline-block px-4 py-2 bg-[#086E0A]/10 text-[#086E0A] rounded-full">
               New Collection 2025
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-gray-900 leading-tight">
               Step Into
               <br />
-              <span className="text-[#163C40]">Your Style</span>
+              <span className="text-[#086E0A]">Your Style</span>
             </h1>
             
             <p className="text-lg lg:text-xl text-gray-600 max-w-lg mx-auto lg:mx-0">
@@ -22,7 +22,7 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="px-8 py-4 bg-[#163C40] text-white rounded-lg hover:bg-[#0f2a2d] transition-colors flex items-center justify-center gap-2 group">
+              <button className="px-8 py-4 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors flex items-center justify-center gap-2 group">
                 Shop Now
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -60,8 +60,8 @@ export function Hero() {
             </div>
             
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-[#163C40]/30 rounded-full blur-3xl opacity-50" />
-            <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-[#163C40]/20 rounded-full blur-3xl opacity-50" />
+            <div className="absolute -top-4 -right-4 w-32 h-32 bg-[#086E0A]/30 rounded-full blur-3xl opacity-50" />
+            <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-[#086E0A]/20 rounded-full blur-3xl opacity-50" />
           </div>
         </div>
       </div>
@@ -71,8 +71,8 @@ export function Hero() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center lg:text-left">
             <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#163C40]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#163C40]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
@@ -83,8 +83,8 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#163C40]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#163C40]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
@@ -95,8 +95,8 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#163C40]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#163C40]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
@@ -107,8 +107,8 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#163C40]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#163C40]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
