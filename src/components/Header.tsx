@@ -39,7 +39,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
               className="text-2xl lg:text-3xl tracking-tight"
               style={{ color: '#ffffff', fontWeight: 900, letterSpacing: '-0.02em' }}
             >
-              StepUp
+              Step<span style={{ color: '#086E0A' }}>Up</span>
             </a>
 
             {/* Desktop Navigation */}
@@ -50,11 +50,11 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
                   onClick={() => handleNavClick(item)}
                   className={`relative transition-colors px-3 py-2 rounded-lg ${
                     activeNav === item
-                      ? 'text-white font-medium'
+                      ? 'text-[#086E0A] font-medium'
                       : 'text-white hover:bg-white/20'
                   }`}
                   style={activeNav === item 
-                    ? { backgroundColor: 'rgba(255, 255, 255, 0.2)', color: '#ffffff' }
+                    ? { backgroundColor: 'transparent', color: '#086E0A' }
                     : { color: '#ffffff' }
                   }
                   onMouseEnter={(e) => {
@@ -72,7 +72,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
                 >
                   {item}
                   {activeNav === item && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#086E0A] rounded-full" />
                   )}
                 </button>
               ))}
@@ -196,11 +196,11 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
                   onClick={() => handleNavClick(item)}
                   className={`relative text-left transition-colors px-3 py-2 rounded-lg ${
                     activeNav === item
-                      ? 'text-white font-medium'
+                      ? 'text-[#086E0A] font-medium'
                       : 'text-white hover:bg-white/20'
                   }`}
                   style={activeNav === item 
-                    ? { backgroundColor: 'rgba(255, 255, 255, 0.2)', color: '#ffffff' }
+                    ? { backgroundColor: 'transparent', color: '#086E0A' }
                     : { color: '#ffffff' }
                   }
                   onMouseEnter={(e) => {
@@ -218,7 +218,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
                 >
                   {item}
                   {activeNav === item && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-white rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#086E0A] rounded-full" />
                   )}
                 </button>
               ))}

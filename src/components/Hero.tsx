@@ -137,9 +137,8 @@ export function Hero() {
           <img
             src={featuredProduct.image}
             alt="Nike Shoe"
-            className="relative z-10"
+            className="relative z-10 max-w-[250px] sm:max-w-[350px] md:max-w-[450px] lg:max-w-[550px]"
             style={{
-              maxWidth: '550px',
               transform: 'rotate(-20deg)',
               marginRight: '-80px',
               marginTop: '80px',

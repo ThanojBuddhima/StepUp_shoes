@@ -59,9 +59,9 @@ export function ProductCard({ product, onAddToCart, isFavorite, onToggleFavorite
         {!showQuickAdd && (
           <button
             onClick={() => setShowQuickAdd(true)}
-            className="absolute bottom-3 left-3 right-3 py-3 bg-[#086E0A] text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 hover:bg-[#000000]"
+            className="absolute bottom-3 left-3 right-3 py-3 bg-[#086E0A] text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 hover:bg-[#065408]"
             style={{ backgroundColor: '#086E0A' }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#000000'}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
           >
             <ShoppingCart className="w-5 h-5" />
