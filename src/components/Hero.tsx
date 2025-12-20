@@ -24,59 +24,38 @@ export function Hero() {
       <div className="fixed bottom-4 left-4 w-3 h-3 bg-white rounded-full z-50" />
       <div className="fixed bottom-4 right-4 w-3 h-3 bg-white rounded-full z-50" />
 
-      {/* Sidebar - Left */}
-      <div className="fixed left-6 top-1/2 -translate-y-1/2 flex flex-col gap-12 z-50">
-        <div 
-          className="font-semibold tracking-widest"
-          style={{ 
-            writingMode: 'vertical-rl',
-            transform: 'rotate(180deg)',
-            color: 'rgba(255,255,255,0.6)',
-            fontSize: '18px'
-          }}
-        >
-          DELIVERY
-        </div>
-        <div 
-          className="font-semibold tracking-widest"
-          style={{ 
-            writingMode: 'vertical-rl',
-            transform: 'rotate(180deg)',
-            color: '#ff5539',
-            fontSize: '18px'
-          }}
-        >
-          PACKAGING
-        </div>
-        <div 
-          className="font-semibold tracking-widest"
-          style={{ 
-            writingMode: 'vertical-rl',
-            transform: 'rotate(180deg)',
-            color: 'rgba(255,255,255,0.6)',
-            fontSize: '18px'
-          }}
-        >
-          FAQ
-        </div>
-      </div>
-
-      {/* Social Icons - Left Bottom */}
-      <div className="fixed left-6 bottom-12 flex flex-col gap-5 z-50">
-        <Twitter 
-          className="w-5 h-5 text-white cursor-pointer hover:text-[#ff5539] transition-colors" 
-        />
-        <Instagram 
-          className="w-5 h-5 text-white cursor-pointer hover:text-[#ff5539] transition-colors" 
-        />
-        <Facebook 
-          className="w-5 h-5 text-white cursor-pointer hover:text-[#ff5539] transition-colors" 
-        />
-      </div>
-
       {/* Hero Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ height: 'calc(100vh - 80px)', width: '100%' }}>
-        <div className="flex items-center justify-between pt-10" style={{ height: '100%' }}>
+        <div className="flex items-center justify-between pt-10 relative" style={{ height: '100%' }}>
+          {/* Background Text "StepUp" */}
+          <div 
+            className="absolute"
+            style={{
+              top: '35%',
+              right: '0',
+              transform: 'translateY(-50%)',
+              zIndex: 1,
+              pointerEvents: 'none'
+            }}
+          >
+            <div
+              className="font-black"
+              style={{
+                fontSize: '420px',
+                lineHeight: '0.3',
+                color: 'rgba(255, 255, 255, 0.1)',
+                letterSpacing: '-0.05em',
+                whiteSpace: 'nowrap',
+                fontStretch: 'condensed',
+                fontFamily: 'system-ui, -apple-system, sans-serif',
+                textAlign: 'right',
+                transform: 'scaleX(0.7)',
+                transformOrigin: 'right center'
+              } as React.CSSProperties}
+            >
+              StepUp
+            </div>
+          </div>
         {/* Hero Content - Left */}
         <div 
           className="flex-shrink-0 flex flex-col justify-center" 
@@ -114,52 +93,46 @@ export function Hero() {
             Discover footwear designed for comfort, durability, and everyday performance. From daily wear to high-impact movement, StepUp shoes adapt to your lifestyle—so you can move confidently, anywhere.
           </p>
 
-          {/* Shop Now Button */}
-          <button 
-            className="px-4 py-2 text-white font-medium rounded-lg cursor-pointer transition-all self-start text-sm"
-            style={{ 
-              background: '#086E0A'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#065408';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = '#086E0A';
-            }}
-          >
-            Shop Now
-          </button>
+          {/* Action Buttons */}
+          <div className="flex gap-4 self-start">
+            <button 
+              className="py-3 px-6 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors"
+              style={{ backgroundColor: '#086E0A' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
+            >
+              Shop Now
+            </button>
+            <button 
+              className="py-3 px-6 border-2 border-[#086E0A] text-[#086E0A] rounded-lg hover:bg-[#086E0A]/10 transition-colors"
+              style={{ borderColor: '#086E0A', borderWidth: '2px' }}
+            >
+              Contact Us
+            </button>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex gap-4 mt-12">
+            <div className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer">
+              <Twitter 
+                className="w-5 h-5 text-white hover:text-[#ff5539] transition-colors" 
+              />
+            </div>
+            <div className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer">
+              <Instagram 
+                className="w-5 h-5 text-white hover:text-[#ff5539] transition-colors" 
+              />
+            </div>
+            <div className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer">
+              <Facebook 
+                className="w-5 h-5 text-white hover:text-[#ff5539] transition-colors" 
+              />
+            </div>
+          </div>
         </div>
 
         {/* Shoe Section - Right */}
         <div className="flex-1 relative flex items-center justify-center" style={{ height: '100%' }}>
-          {/* Background Text "StepUp" */}
-          <div 
-            className="absolute"
-            style={{
-              top: '35%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              zIndex: 1,
-              pointerEvents: 'none'
-            }}
-          >
-            <div
-              className="font-black"
-              style={{
-                fontSize: '380px',
-                lineHeight: '0.3',
-                color: 'rgba(255, 255, 255, 0.1)',
-                letterSpacing: '-0.05em',
-                whiteSpace: 'nowrap',
-                fontStretch: 'condensed',
-                fontFamily: 'system-ui, -apple-system, sans-serif'
-              } as React.CSSProperties}
-            >
-              StepUp
-            </div>
-          </div>
-
           {/* Shoe Main Image */}
           <img
             src={featuredProduct.image}
