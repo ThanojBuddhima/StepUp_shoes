@@ -20,7 +20,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#032804]/30" style={{ backgroundColor: '#032804', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
+    <header className="sticky top-0 z-50 border-b border-black/30" style={{ backgroundColor: '#000000', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -88,7 +88,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
                 placeholder="Search shoes..."
                 className="w-full pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-2 transition-all placeholder:text-white/70"
                 style={{ 
-                  backgroundColor: 'rgba(3, 40, 4, 0.3)',
+                  backgroundColor: 'rgba(0, 0, 0, 0.3)',
                   borderColor: 'rgba(255, 255, 255, 0.5)',
                   color: '#ffffff',
                   borderWidth: '2px',
@@ -97,12 +97,12 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
                 }}
                 onFocus={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
-                  e.currentTarget.style.backgroundColor = 'rgba(3, 40, 4, 0.4)';
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
                   e.currentTarget.style.boxShadow = '0 0 0 3px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15)';
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.5)';
-                  e.currentTarget.style.backgroundColor = 'rgba(3, 40, 4, 0.3)';
+                  e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
                   e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
                 }}
               />
@@ -165,7 +165,7 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
               placeholder="Search shoes..."
               className="w-full pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-2 placeholder:text-white/70"
               style={{ 
-                backgroundColor: 'rgba(5, 64, 6, 0.2)',
+                backgroundColor: 'rgba(0, 0, 0, 0.2)',
                 borderColor: 'rgba(255, 255, 255, 0.5)',
                 color: '#ffffff',
                 borderWidth: '2px',
@@ -174,12 +174,12 @@ export function Header({ cartItemsCount, onCartClick, activeNav, onNavClick, onP
               }}
               onFocus={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.8)';
-                e.currentTarget.style.backgroundColor = 'rgba(5, 64, 6, 0.3)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
                 e.currentTarget.style.boxShadow = '0 0 0 3px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15)';
               }}
               onBlur={(e) => {
                 e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.5)';
-                e.currentTarget.style.backgroundColor = 'rgba(5, 64, 6, 0.2)';
+                e.currentTarget.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
                 e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
               }}
             />

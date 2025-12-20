@@ -1,137 +1,310 @@
-import { ArrowRight } from 'lucide-react';
+import { Twitter, Instagram, Facebook } from 'lucide-react';
+import { useState } from 'react';
 
 export function Hero() {
+  const [selectedColor, setSelectedColor] = useState('bw');
+
+  // Featured product data
+  const featuredProduct = {
+    name: 'NIKE AIR MAX III',
+    price: 189,
+    rating: 5,
+    image: '/images/heroshoe.png'
+  };
+
   return (
-    <div className="relative overflow-hidden" style={{ 
-      background: 'linear-gradient(to bottom right, rgba(8, 110, 10, 0.15), rgba(8, 110, 10, 0.08), rgba(8, 110, 10, 0.12))'
+    <div className="relative min-h-screen" style={{ 
+      background: '#0d2a0d',
+      color: 'white',
+      fontFamily: "'Helvetica Neue', Arial, sans-serif"
     }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
-            <div className="inline-block px-4 py-2 bg-[#086E0A]/10 text-[#086E0A] rounded-full">
-              New Collection 2025
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-gray-900 leading-tight">
-              Step Into
-              <br />
-              <span className="text-[#086E0A]">Your Style</span>
-            </h1>
-            
-            <p className="text-lg lg:text-xl text-gray-600 max-w-lg mx-auto lg:mx-0">
-              Discover premium footwear that combines comfort, style, and performance. Free shipping on orders over $100.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button 
-                className="px-8 py-4 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] focus:outline-none focus:ring-2 focus:ring-[#086E0A] focus:ring-offset-2 transition-colors flex items-center justify-center gap-2 group font-medium"
-                style={{ backgroundColor: '#086E0A' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
-              >
-                Shop Now
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              
-              <button 
-                className="px-8 py-4 bg-white text-[#086E0A] border border-[#086E0A] rounded-lg hover:bg-[#086E0A]/10 transition-colors"
-                style={{ borderColor: '#086E0A', color: '#086E0A' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(8, 110, 10, 0.1)'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#ffffff'}
-              >
-                View Collection
-              </button>
-            </div>
+      {/* Corner Dots */}
+      <div className="fixed top-4 left-4 w-3 h-3 bg-white rounded-full z-50" />
+      <div className="fixed top-4 right-4 w-3 h-3 bg-white rounded-full z-50" />
+      <div className="fixed bottom-4 left-4 w-3 h-3 bg-white rounded-full z-50" />
+      <div className="fixed bottom-4 right-4 w-3 h-3 bg-white rounded-full z-50" />
 
-            {/* Stats */}
-            <div className="flex gap-8 justify-center lg:justify-start pt-4">
-              <div>
-                <div className="text-2xl lg:text-3xl text-gray-900">500+</div>
-                <div className="text-sm text-gray-600">Products</div>
-              </div>
-              <div>
-                <div className="text-2xl lg:text-3xl text-gray-900">50K+</div>
-                <div className="text-sm text-gray-600">Happy Customers</div>
-              </div>
-              <div>
-                <div className="text-2xl lg:text-3xl text-gray-900">4.8★</div>
-                <div className="text-sm text-gray-600">Average Rating</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Hero Image */}
-          <div className="relative">
-            <div className="relative z-10">
-              <img
-                src="https://images.unsplash.com/photo-1638953173691-671b6c2692fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG9lJTIwc3RvcmUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjYxNTM3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Shoe Collection"
-                className="rounded-2xl shadow-2xl w-full object-cover aspect-square lg:aspect-auto lg:h-[500px]"
-              />
-            </div>
-            
-            {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-[#086E0A]/30 rounded-full blur-3xl opacity-50" />
-            <div className="absolute -bottom-4 -left-4 w-40 h-40 bg-[#086E0A]/20 rounded-full blur-3xl opacity-50" />
-          </div>
+      {/* Sidebar - Left */}
+      <div className="fixed left-6 top-1/2 -translate-y-1/2 flex flex-col gap-12 z-50">
+        <div 
+          className="font-semibold tracking-widest"
+          style={{ 
+            writingMode: 'vertical-rl',
+            transform: 'rotate(180deg)',
+            color: 'rgba(255,255,255,0.6)',
+            fontSize: '18px'
+          }}
+        >
+          DELIVERY
+        </div>
+        <div 
+          className="font-semibold tracking-widest"
+          style={{ 
+            writingMode: 'vertical-rl',
+            transform: 'rotate(180deg)',
+            color: '#ff5539',
+            fontSize: '18px'
+          }}
+        >
+          PACKAGING
+        </div>
+        <div 
+          className="font-semibold tracking-widest"
+          style={{ 
+            writingMode: 'vertical-rl',
+            transform: 'rotate(180deg)',
+            color: 'rgba(255,255,255,0.6)',
+            fontSize: '18px'
+          }}
+        >
+          FAQ
         </div>
       </div>
 
-      {/* Features Bar */}
-      <div className="border-t border-gray-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center lg:text-left">
-            <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div>
-                <div className="text-gray-900">Free Shipping</div>
-                <div className="text-sm text-gray-600">Orders over $100</div>
-              </div>
-            </div>
+      {/* Social Icons - Left Bottom */}
+      <div className="fixed left-6 bottom-12 flex flex-col gap-5 z-50">
+        <Twitter 
+          className="w-5 h-5 text-white cursor-pointer hover:text-[#ff5539] transition-colors" 
+        />
+        <Instagram 
+          className="w-5 h-5 text-white cursor-pointer hover:text-[#ff5539] transition-colors" 
+        />
+        <Facebook 
+          className="w-5 h-5 text-white cursor-pointer hover:text-[#ff5539] transition-colors" 
+        />
+      </div>
 
-            <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <div>
-                <div className="text-gray-900">30 Day Returns</div>
-                <div className="text-sm text-gray-600">Easy returns policy</div>
-              </div>
-            </div>
+      {/* Hero Container */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ height: 'calc(100vh - 80px)', width: '100%' }}>
+        <div className="flex items-center justify-between pt-10" style={{ height: '100%' }}>
+        {/* Hero Content - Left */}
+        <div 
+          className="flex-shrink-0 flex flex-col justify-center" 
+          style={{ 
+            flex: '0 0 45%', 
+            zIndex: 10,
+            paddingRight: '2rem'
+          }}
+        >
+          {/* Headline */}
+          <h1 
+            className="font-black leading-tight"
+            style={{ 
+              fontSize: '4rem',
+              lineHeight: '1.2',
+              color: '#ffffff',
+              letterSpacing: '-0.02em',
+              marginBottom: '2rem'
+            }}
+          >
+            Built for Every Step You Take
+          </h1>
 
-            <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <div>
-                <div className="text-gray-900">Secure Payment</div>
-                <div className="text-sm text-gray-600">100% protected</div>
-              </div>
-            </div>
+          {/* Paragraph */}
+          <p 
+            className="mb-8" 
+            style={{ 
+              fontSize: '18px', 
+              color: 'rgba(255,255,255,0.8)', 
+              lineHeight: '1.7', 
+              maxWidth: '500px',
+              marginBottom: '2.5rem'
+            }}
+          >
+            Discover footwear designed for comfort, durability, and everyday performance. From daily wear to high-impact movement, StepUp shoes adapt to your lifestyle—so you can move confidently, anywhere.
+          </p>
 
-            <div className="flex flex-col lg:flex-row items-center gap-3">
-              <div className="w-12 h-12 bg-[#086E0A]/10 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#086E0A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
-              <div>
-                <div className="text-gray-900">24/7 Support</div>
-                <div className="text-sm text-gray-600">Always here to help</div>
-              </div>
+          {/* Shop Now Button */}
+          <button 
+            className="px-4 py-2 text-white font-medium rounded-lg cursor-pointer transition-all self-start text-sm"
+            style={{ 
+              background: '#086E0A'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = '#065408';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = '#086E0A';
+            }}
+          >
+            Shop Now
+          </button>
+        </div>
+
+        {/* Shoe Section - Right */}
+        <div className="flex-1 relative flex items-center justify-center" style={{ height: '100%' }}>
+          {/* Background Text "StepUp" */}
+          <div 
+            className="absolute"
+            style={{
+              top: '35%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 1,
+              pointerEvents: 'none'
+            }}
+          >
+            <div
+              className="font-black"
+              style={{
+                fontSize: '380px',
+                lineHeight: '0.3',
+                color: 'rgba(255, 255, 255, 0.1)',
+                letterSpacing: '-0.05em',
+                whiteSpace: 'nowrap',
+                fontStretch: 'condensed',
+                fontFamily: 'system-ui, -apple-system, sans-serif'
+              } as React.CSSProperties}
+            >
+              StepUp
             </div>
           </div>
+
+          {/* Shoe Main Image */}
+          <img
+            src={featuredProduct.image}
+            alt="Nike Shoe"
+            className="relative z-10"
+            style={{
+              maxWidth: '550px',
+              transform: 'rotate(-20deg)',
+              marginRight: '-80px',
+              marginTop: '80px',
+              animation: 'floatShoe 4s ease-in-out infinite'
+            }}
+          />
+
+          {/* Color Selector */}
+          <div 
+            className="absolute flex flex-col gap-4 z-20"
+            style={{
+              right: '200px',
+              top: '47%',
+              transform: 'translateY(-50%)'
+            }}
+          >
+            <button
+              onClick={() => setSelectedColor('bw')}
+              className="w-7 h-7 rounded-full cursor-pointer transition-all relative"
+              style={{
+                background: 'conic-gradient(from 135deg, white 0deg 180deg, #2a2a2a 180deg 360deg)',
+                border: selectedColor === 'bw' ? '2px solid white' : '2px solid transparent'
+              }}
+              onMouseEnter={(e) => {
+                if (selectedColor !== 'bw') {
+                  e.currentTarget.style.transform = 'scale(1.15)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedColor !== 'bw') {
+                  e.currentTarget.style.transform = 'scale(1)';
+                }
+              }}
+            />
+            <button
+              onClick={() => setSelectedColor('rw')}
+              className="w-7 h-7 rounded-full cursor-pointer transition-all relative"
+              style={{
+                background: 'conic-gradient(from 135deg, #ff3355 0deg 180deg, white 180deg 360deg)',
+                border: selectedColor === 'rw' ? '2px solid white' : '2px solid transparent'
+              }}
+              onMouseEnter={(e) => {
+                if (selectedColor !== 'rw') {
+                  e.currentTarget.style.transform = 'scale(1.15)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedColor !== 'rw') {
+                  e.currentTarget.style.transform = 'scale(1)';
+                }
+              }}
+            />
+            <button
+              onClick={() => setSelectedColor('ow')}
+              className="w-7 h-7 rounded-full cursor-pointer transition-all relative"
+              style={{
+                background: 'conic-gradient(from 135deg, #ff5539 0deg 180deg, white 180deg 360deg)',
+                border: selectedColor === 'ow' ? '2px solid white' : '2px solid transparent'
+              }}
+              onMouseEnter={(e) => {
+                if (selectedColor !== 'ow') {
+                  e.currentTarget.style.transform = 'scale(1.15)';
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (selectedColor !== 'ow') {
+                  e.currentTarget.style.transform = 'scale(1)';
+                }
+              }}
+            />
+          </div>
+
+          {/* Navigation Arrows */}
+          <div 
+            className="absolute flex gap-4 z-20"
+            style={{
+              right: '150px',
+              top: '50%',
+              transform: 'translateY(-50%)'
+            }}
+          >
+            <button 
+              className="w-11 h-11 rounded-full flex items-center justify-center text-lg cursor-pointer transition-all"
+              style={{
+                background: 'transparent',
+                border: '2px solid rgba(255,255,255,0.4)',
+                color: 'rgba(255,255,255,0.6)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#ff5539';
+                e.currentTarget.style.borderColor = '#ff5539';
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)';
+                e.currentTarget.style.color = 'rgba(255,255,255,0.6)';
+              }}
+            >
+              ‹
+            </button>
+            <button 
+              className="w-11 h-11 rounded-full flex items-center justify-center text-lg cursor-pointer transition-all"
+              style={{
+                background: 'transparent',
+                border: '2px solid rgba(255,255,255,0.4)',
+                color: 'rgba(255,255,255,0.6)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#ff5539';
+                e.currentTarget.style.borderColor = '#ff5539';
+                e.currentTarget.style.color = 'white';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)';
+                e.currentTarget.style.color = 'rgba(255,255,255,0.6)';
+              }}
+            >
+              ›
+            </button>
+          </div>
+
         </div>
       </div>
+      </div>
+
+      {/* CSS Animation */}
+      <style>{`
+        @keyframes floatShoe {
+          0%, 100% {
+            transform: rotate(-20deg) translateY(0px);
+          }
+          50% {
+            transform: rotate(-20deg) translateY(-15px);
+          }
+        }
+      `}</style>
     </div>
   );
 }

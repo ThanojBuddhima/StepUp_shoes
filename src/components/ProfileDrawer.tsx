@@ -162,7 +162,10 @@ export function ProfileDrawer({ isOpen, onClose, favoritesCount, onNavigateToFav
                       </button>
                       <button
                         onClick={handleCancel}
-                        className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="px-4 py-2 border border-[#086E0A] text-[#086E0A] rounded-lg hover:bg-[#086E0A]/10 transition-colors"
+                        style={{ borderColor: '#086E0A', color: '#086E0A' }}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(8, 110, 10, 0.1)'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                       >
                         Cancel
                       </button>
@@ -345,7 +348,10 @@ export function ProfileDrawer({ isOpen, onClose, favoritesCount, onNavigateToFav
                           handleCancel();
                           setActiveSection(null);
                         }}
-                        className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                        className="px-4 py-2 border border-[#086E0A] text-[#086E0A] rounded-lg hover:bg-[#086E0A]/10 transition-colors"
+                        style={{ borderColor: '#086E0A', color: '#086E0A' }}
+                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(8, 110, 10, 0.1)'}
+                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
                       >
                         Cancel
                       </button>

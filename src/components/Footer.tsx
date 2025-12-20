@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="border-t border-[#086E0A]/20 mt-16" style={{ 
-      background: 'linear-gradient(to bottom right, rgba(8, 110, 10, 0.15), rgba(8, 110, 10, 0.08), rgba(8, 110, 10, 0.12))'
+      background: 'linear-gradient(to bottom right, rgba(8, 110, 10, 0.04), rgba(8, 110, 10, 0.02), rgba(8, 110, 10, 0.03))'
     }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
