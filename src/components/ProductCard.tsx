@@ -55,44 +55,45 @@ export function ProductCard({ product, onAddToCart, isFavorite, onToggleFavorite
           )}
         </div>
 
-        {/* Quick Add Button */}
-        {!showQuickAdd && (
-          <button
-            onClick={() => setShowQuickAdd(true)}
-            className="absolute bottom-3 left-3 right-3 py-3 bg-[#086E0A] text-white rounded-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 hover:bg-[#065408]"
-            style={{ backgroundColor: '#086E0A' }}
-            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
-            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
-          >
-            <ShoppingCart className="w-5 h-5" />
-            Quick Add
-          </button>
-        )}
       </div>
 
       {/* Product Info */}
       <div className="p-4 space-y-3">
         <div>
-          <h3 className="text-gray-900 line-clamp-1 group-hover:text-[#086E0A] transition-colors">{product.name}</h3>
-          <div className="flex items-center gap-2 mt-1">
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-sm text-gray-700">{product.rating}</span>
+          <div className="flex items-center justify-between gap-2 mb-1">
+            <h3 className="text-gray-900 line-clamp-1 group-hover:text-[#086E0A] transition-colors flex-1">{product.name}</h3>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <span className="text-2xl text-[#086E0A] font-semibold">
+                ${product.price}
+              </span>
+              {product.originalPrice && (
+                <span className="text-lg text-gray-400 line-through">
+                  ${product.originalPrice}
+                </span>
+              )}
             </div>
-            <span className="text-sm text-gray-500">({product.reviews})</span>
           </div>
-        </div>
-
-        {/* Price */}
-        <div className="flex items-center gap-2">
-          <span className="text-2xl text-[#086E0A] font-semibold">
-            ${product.price}
-          </span>
-          {product.originalPrice && (
-            <span className="text-lg text-gray-400 line-through">
-              ${product.originalPrice}
-            </span>
-          )}
+          <div className="flex items-center justify-between gap-4 mt-2">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
+                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                <span className="text-sm text-gray-700">{product.rating}</span>
+              </div>
+              <span className="text-sm text-gray-500">({product.reviews})</span>
+            </div>
+            {!showQuickAdd && (
+              <button
+                onClick={() => setShowQuickAdd(true)}
+                className="py-2 px-4 bg-[#086E0A] text-white rounded-lg flex items-center justify-center gap-2 hover:bg-[#065408] transition-colors text-sm"
+                style={{ backgroundColor: '#086E0A' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
+              >
+                <ShoppingCart className="w-4 h-4" />
+                Quick Add
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Quick Add Panel */}

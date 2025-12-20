@@ -1,7 +1,12 @@
 import { Twitter, Instagram, Facebook } from 'lucide-react';
 import { useState } from 'react';
 
-export function Hero() {
+interface HeroProps {
+  onShopNow?: () => void;
+  onContactUs?: () => void;
+}
+
+export function Hero({ onShopNow, onContactUs }: HeroProps) {
   const [selectedColor, setSelectedColor] = useState('bw');
 
   // Featured product data
@@ -77,8 +82,8 @@ export function Hero() {
             }}
           >
             Built for Every Step You Take
-          </h1>
-
+            </h1>
+            
           {/* Paragraph */}
           <p 
             className="mb-8" 
@@ -100,36 +105,73 @@ export function Hero() {
               style={{ backgroundColor: '#086E0A' }}
               onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
               onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
+              onClick={() => {
+                if (onShopNow) {
+                  onShopNow();
+                } else {
+                  // Default: scroll to products section
+                  const productsSection = document.querySelector('.max-w-7xl.mx-auto.px-4');
+                  if (productsSection) {
+                    productsSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
+              }}
             >
-              Shop Now
-            </button>
+                Shop Now
+              </button>
             <button 
               className="py-3 px-6 border-2 border-[#086E0A] text-[#086E0A] rounded-lg hover:bg-[#086E0A]/10 transition-colors"
               style={{ borderColor: '#086E0A', borderWidth: '2px' }}
+              onClick={() => {
+                if (onContactUs) {
+                  onContactUs();
+                } else {
+                  // Default: scroll to footer
+                  const footer = document.querySelector('footer');
+                  if (footer) {
+                    footer.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }
+              }}
             >
               Contact Us
-            </button>
+              </button>
           </div>
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-12">
-            <div className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer">
+            <a 
+              href="https://twitter.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer"
+            >
               <Twitter 
                 className="w-5 h-5 text-white hover:text-[#ff5539] transition-colors" 
               />
-            </div>
-            <div className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer">
+            </a>
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer"
+            >
               <Instagram 
                 className="w-5 h-5 text-white hover:text-[#ff5539] transition-colors" 
               />
-            </div>
-            <div className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer">
+            </a>
+            <a 
+              href="https://facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/15 hover:border-white/20 transition-colors cursor-pointer"
+            >
               <Facebook 
                 className="w-5 h-5 text-white hover:text-[#ff5539] transition-colors" 
               />
-            </div>
-          </div>
+            </a>
         </div>
+      </div>
 
         {/* Shoe Section - Right */}
         <div className="flex-1 relative flex items-center justify-center" style={{ height: '100%' }}>
@@ -209,7 +251,7 @@ export function Hero() {
                 }
               }}
             />
-          </div>
+            </div>
 
           {/* Navigation Arrows */}
           <div 

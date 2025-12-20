@@ -1,6 +1,22 @@
 import { Facebook, Instagram, Twitter, Mail } from 'lucide-react';
+import { useState } from 'react';
 
 export function Footer() {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email && email.includes('@')) {
+      // Here you would typically send the email to your backend
+      console.log('Subscribing email:', email);
+      setSubscribed(true);
+      setEmail('');
+      setTimeout(() => setSubscribed(false), 3000);
+    } else {
+      alert('Please enter a valid email address');
+    }
+  };
   return (
     <footer className="border-t border-[#086E0A]/20 mt-16" style={{ 
       background: 'linear-gradient(to bottom right, rgba(8, 110, 10, 0.04), rgba(8, 110, 10, 0.02), rgba(8, 110, 10, 0.03))'
@@ -108,24 +124,28 @@ export function Footer() {
             <p className="text-gray-600 mb-4">
               Subscribe to get special offers and updates.
             </p>
-            <div className="space-y-3">
+            <form onSubmit={handleSubscribe} className="space-y-3">
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5" style={{ color: '#086E0A' }} />
                 <input
                   type="email"
                   placeholder="Your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#086E0A] placeholder:text-gray-400 bg-white border border-gray-300 text-gray-900"
+                  required
                 />
               </div>
               <button 
+                type="submit"
                 className="w-full py-3 bg-[#086E0A] text-white rounded-lg hover:bg-[#065408] transition-colors"
                 style={{ backgroundColor: '#086E0A' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#065408'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#086E0A'}
               >
-                Subscribe
+                {subscribed ? 'Subscribed!' : 'Subscribe'}
               </button>
-            </div>
+            </form>
           </div>
         </div>
 
